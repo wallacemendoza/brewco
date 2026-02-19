@@ -25,7 +25,7 @@ app.get('/dashboard', (req, res) => {
 });
 
 setupDatabase().then(() => {
-  app.listen(PORT, () => console.log(`☕ Brew & Co running on port ${PORT}`));
+  app.listen(PORT, '0.0.0.0', () => console.log(`☕ Brew & Co running on port ${PORT}`));
 }).catch(err => {
   console.error('Failed to start:', err.message);
   process.exit(1);
